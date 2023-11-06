@@ -71,19 +71,18 @@ $(document).ready(function () {
 });
 
 const cursor = document.querySelector('.cursor');
-let e; // Declare e outside of the event listeners
+let e;
 
 document.addEventListener('mousemove', (event) => {
-    e = event; // Store the event object in the variable e
-    cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;");
+  e = event;
+  cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;");
 });
 
-
 document.addEventListener('scroll', () => {
-    if (e) {
-        const scrollY = window.scrollY || window.pageYOffset;
-        cursor.style.top = `${scrollY + e.clientY - 10}px`; // Adjust the Y position as needed
-    }
+  if (e) {
+    const scrollY = window.scrollY || window.pageYOffset;
+    cursor.style.top = `${scrollY + e.clientY - 10}px`;
+  }
 });
 
 

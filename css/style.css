@@ -105,7 +105,12 @@ body {
   animation: cursorAnim .5s infinite alternate;
   pointer-events: none;
   z-index: 5000;
+}
 
+@media (max-width: 991px) { 
+  .cursor {
+    display: none; 
+  }
 }
 
 .intro {
