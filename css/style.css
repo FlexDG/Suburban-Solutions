@@ -107,12 +107,43 @@ body {
   z-index: 5000;
 }
 
-@media (max-width: 991px) { 
-  .cursor {
-    display: none; 
-  }
+@media only screen
+ and (min-device-width: 1024px)
+ and (max-device-width: 1024px)
+ and (orientation: portrait)
+ and (-webkit-min-device-pixel-ratio: 2) {
+
+body {
+   cursor: default;
 }
 
+.cursor {
+   display: none;
+}
+
+a {
+   cursor: pointer;
+}
+}
+
+@media only screen
+ and (min-device-width: 1366px)
+ and (max-device-width: 1366px)
+ and (orientation: landscape)
+ and (-webkit-min-device-pixel-ratio: 2) {
+ 
+body {
+   cursor: default;
+}
+
+.cursor {
+   display: none;
+}
+
+a {
+   cursor: pointer;
+}
+}
 .intro {
   position: fixed;
   z-index: 100000;
