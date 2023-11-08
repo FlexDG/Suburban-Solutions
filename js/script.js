@@ -37,71 +37,80 @@ scrollButton.addEventListener("click", () => {
 
 var lastScrollTop = 0;
 navbar = document.getElementById("navbar");
-window.addEventListener("scroll", function() {
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop) {
-        // Scrolling down
-        navbar.style.top = "-130px";
-        navbar.classList.remove("navbar-white"); // Remove the white background class
-    } else {
-        // Scrolling up
-        navbar.style.top = "0";
-        navbar.classList.add("navbar-white"); // Add the white background class
-    }
+window.addEventListener("scroll", function () {
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    // Scrolling down
+    navbar.style.top = "-130px";
+    navbar.classList.remove("navbar-white"); // Remove the white background class
+  } else {
+    // Scrolling up
+    navbar.style.top = "0";
+    navbar.classList.add("navbar-white"); // Add the white background class
+  }
 
-    // Check if the user has scrolled back to the top
-    if (scrollTop <= 0) {
-        navbar.classList.remove("navbar-white"); // Remove the white background class
-    }
+  // Check if the user has scrolled back to the top
+  if (scrollTop <= 0) {
+    navbar.classList.remove("navbar-white"); // Remove the white background class
+  }
 
-    lastScrollTop = scrollTop;
+  lastScrollTop = scrollTop;
 });
 
 
 $(document).ready(function () {
   $('.menu-toggle').click(function () {
     $('nav').toggleClass('active');
-     $('.brand').toggleClass('active');
-      $('ul').toggleClass('active');
-      $('li').toggleClass('active');
-      $('.bar').toggleClass('active');
-      $('.bar').toggleClass('active');
-      $('.bar').toggleClass('active');
+    $('.brand').toggleClass('active');
+    $('ul').toggleClass('active');
+    $('li').toggleClass('active');
+    $('.bar').toggleClass('active');
+    $('.bar').toggleClass('active');
+    $('.bar').toggleClass('active');
   });
 });
 
 const cursor = document.querySelector('.cursor');
-let e; 
+let e;
 
 document.addEventListener('mousemove', (event) => {
-    e = event; 
-    cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;");
+    e = event;
+    cursor.style.top = (e.pageY - 10) + "px";
+    cursor.style.left = (e.pageX - 10) + "px";
 });
 
+// Check if the device is a mobile device
+function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+// Hide the cursor on mobile devices
+if (isMobileDevice()) {
+    cursor.style.display = "none";
+}
 
 document.addEventListener('scroll', () => {
-    if (e) {
-        const scrollY = window.scrollY || window.pageYOffset;
-        cursor.style.top = `${scrollY + e.clientY - 10}px`; // Adjust the Y position as needed
-    }
+  if (e) {
+    const scrollY = window.scrollY || window.pageYOffset;
+    cursor.style.top = `${scrollY + e.clientY - 10}px`; // Adjust the Y position as needed
+  }
 });
 
 
 window.addEventListener('scroll', reveal);
 
-function reveal(){
+function reveal() {
   var reveals = document.querySelectorAll('.reveal');
 
-  for(var i = 0; i < reveals.length; i++){
+  for (var i = 0; i < reveals.length; i++) {
 
     var windowheight = window.innerHeight;
     var revealtop = reveals[i].getBoundingClientRect().top;
     var revealpoint = 150;
 
-    if(revealtop < windowheight - revealpoint){
+    if (revealtop < windowheight - revealpoint) {
       reveals[i].classList.add('active');
-    }
-    else{
+    } else {
       reveals[i].classList.remove('active');
     }
   }
@@ -109,19 +118,18 @@ function reveal(){
 
 window.addEventListener('scroll', revealTwo);
 
-function revealTwo(){
+function revealTwo() {
   var reveals = document.querySelectorAll('.reveal-2');
 
-  for(var i = 0; i < reveals.length; i++){
+  for (var i = 0; i < reveals.length; i++) {
 
     var windowheight = window.innerHeight;
     var revealtop = reveals[i].getBoundingClientRect().top;
     var revealpoint = 150;
 
-    if(revealtop < windowheight - revealpoint){
+    if (revealtop < windowheight - revealpoint) {
       reveals[i].classList.add('active');
-    }
-    else{
+    } else {
       reveals[i].classList.remove('active');
     }
   }
@@ -129,19 +137,18 @@ function revealTwo(){
 
 window.addEventListener('scroll', revealThree);
 
-function revealThree(){
+function revealThree() {
   var reveals = document.querySelectorAll('.reveal-3');
 
-  for(var i = 0; i < reveals.length; i++){
+  for (var i = 0; i < reveals.length; i++) {
 
     var windowheight = window.innerHeight;
     var revealtop = reveals[i].getBoundingClientRect().top;
     var revealpoint = 150;
 
-    if(revealtop < windowheight - revealpoint){
+    if (revealtop < windowheight - revealpoint) {
       reveals[i].classList.add('active');
-    }
-    else{
+    } else {
       reveals[i].classList.remove('active');
     }
   }
@@ -150,24 +157,24 @@ function revealThree(){
 
 const text = document.querySelector(".circle-text p");
 text.innerHTML = text.innerText.split('').map(
-    (char, i) =>
-    `<span style="transform:rotate(${i * 8.}deg)">${char}</span>`
+  (char, i) =>
+  `<span style="transform:rotate(${i * 8.}deg)">${char}</span>`
 ).join('');
 
 
 const text2 = document.querySelector(".circle-text-2 p");
 text2.innerHTML = text2.innerText.split('').map(
-    (char, i) =>
-    `<span style="transform:rotate(${i * 8.2}deg)">${char}</span>`
+  (char, i) =>
+  `<span style="transform:rotate(${i * 8.2}deg)">${char}</span>`
 ).join('');
 
 const h = document.querySelector("#h");
 const b = document.body;
 
 let base = (e) => {
-    var x = e.pageX / window.innerWidth - 0.5;
-    var y = e.pageY / window.innerHeight - 0.5;
-    h.style.transform = `
+  var x = e.pageX / window.innerWidth - 0.5;
+  var y = e.pageY / window.innerHeight - 0.5;
+  h.style.transform = `
         perspective(90vw)
         rotateX(${ y * 4  + 65}deg)
         rotateZ(${ -x * 12  + 45}deg)
@@ -176,16 +183,3 @@ let base = (e) => {
 }
 
 b.addEventListener("pointermove", base);
-
-
-const adobeLink = document.getElementById("adobeLink");
-const adobeIcon = document.getElementById("adobeIcon");
-
-adobeLink.addEventListener("mouseenter", function() {
-  adobeIcon.setAttribute("color", "#ffffff"); 
-  adobeIcon.style.transition = "color 0.5s"; 
-});
-
-adobeLink.addEventListener("mouseleave", function() {
-  adobeIcon.setAttribute("color", "#ea6b21"); 
-});

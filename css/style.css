@@ -58,7 +58,7 @@ body {
   transform: scale(0.9);
   transition: 0.3s ease-in-out transform;
   display: flex;
-  opacity: 0;        
+  opacity: 0;
   transition: opacity 0.2s ease-in-out;
   align-items: center;
   justify-content: center;
@@ -107,43 +107,6 @@ body {
   z-index: 5000;
 }
 
-@media only screen
- and (min-device-width: 1024px)
- and (max-device-width: 1024px)
- and (orientation: portrait)
- and (-webkit-min-device-pixel-ratio: 2) {
-
-body {
-   cursor: default;
-}
-
-.cursor {
-   display: none;
-}
-
-a {
-   cursor: pointer;
-}
-}
-
-@media only screen
- and (min-device-width: 1366px)
- and (max-device-width: 1366px)
- and (orientation: landscape)
- and (-webkit-min-device-pixel-ratio: 2) {
- 
-body {
-   cursor: default;
-}
-
-.cursor {
-   display: none;
-}
-
-a {
-   cursor: pointer;
-}
-}
 .intro {
   position: fixed;
   z-index: 100000;
@@ -165,7 +128,6 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   text-shadow: 0 1px 10px rgba(246, 246, 246, 0.29);
-
 }
 
 .logo {
@@ -1152,6 +1114,10 @@ html.w-mod-js *[data-ix="arrow-load"] {
   font-weight: 900;
 }
 
+.tech-stack {
+  width: 105%;
+}
+
 .tech-stack a {
   display: inline-flex;
   align-items: center;
@@ -1162,7 +1128,7 @@ html.w-mod-js *[data-ix="arrow-load"] {
   border: 1px solid var(--white-alpha-40);
   color: #ea6b21;
   border-radius: 50%;
-  margin: 0 20px 0 0;
+  margin: 0 20px 20px 0;
   transition: all 0.3s ease;
   font-size: 25px;
   text-decoration: none;
@@ -1177,7 +1143,6 @@ html.w-mod-js *[data-ix="arrow-load"] {
 .hero .btn {
   margin-inline: auto;
 }
-
 
 /*-----------------------------------*\
   #ABOUT
@@ -4902,6 +4867,31 @@ form h3 span {
   #MEDIA QUERIES
 \*-----------------------------------*/
 
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+  body {
+    cursor: default;
+  }
+
+  .cursor {
+    opacity: 0;
+  }
+
+}
+
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+  body {
+    cursor: default;
+  }
+
+  .cursor {
+    opacity: 0;
+  }
+   
+}
+
+
 @media (min-width: 575px) {
 
   .container {
@@ -4911,7 +4901,6 @@ form h3 span {
 }
 
 @media (min-width: 768px) {
-
 
   html {
     font-size: 17.5px;
@@ -4993,7 +4982,7 @@ form h3 span {
     margin-bottom: -10px;
   }
 
-  .contact-head{
+  .contact-head {
     font-size: 5dvw;
   }
 
@@ -5283,10 +5272,11 @@ form h3 span {
   }
 
 }
+
 @media (max-width: 359px) {
-    .contact-form{
-      height: 100%;
-    }
+  .contact-form {
+    height: 100%;
+  }
 }
 
 
@@ -5298,7 +5288,7 @@ form h3 span {
     margin: auto;
     text-align: center;
   }
-
+ 
   .about-text h1,
   .team-title h1,
   .team-header h1 {
@@ -5453,8 +5443,7 @@ form h3 span {
   .dev-span,
   .dev-span-lang,
   .view-code,
-  .view-code a
-   {
+  .view-code a {
     font-size: 2.3dvw;
   }
 
