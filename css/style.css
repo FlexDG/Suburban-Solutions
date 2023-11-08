@@ -5000,6 +5000,9 @@ form h3 span {
     align-items: center;
   }
 
+  .scroll-top {
+    display: none;
+  }
 
   .services-card img {
     width: 120px;
