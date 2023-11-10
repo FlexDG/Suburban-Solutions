@@ -1140,9 +1140,6 @@ html.w-mod-js *[data-ix="arrow-load"] {
   background-color: #ea6b21;
 }
 
-.hero .btn {
-  margin-inline: auto;
-}
 
 /*-----------------------------------*\
   #ABOUT
@@ -4658,7 +4655,6 @@ form {
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
   padding: 50px 35px;
-  height: 600px;
   box-shadow: 0 0 50px 10px rgba(246, 156, 10, 0.244);
 }
 
@@ -4690,6 +4686,7 @@ form * {
   box-shadow: 0 0 20px 5px rgba(246, 101, 10, 0.146);
   text-shadow: 0 10px 20px rgba(246, 246, 246, 0.208);
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .contact-row button:hover {
@@ -4710,6 +4707,7 @@ form h3 span {
   display: block;
   font-size: 16px;
   font-weight: 300;
+  margin-top: 20px;
   color: #e5e5e5;
 }
 
@@ -4957,7 +4955,6 @@ form h3 span {
       display: none;
     }
 
-
     .circle-link {
       bottom: 47px;
     }
@@ -4974,20 +4971,6 @@ form h3 span {
 
 }
 
-@media (max-device-width: 444px),
-(max-width: 730px) {
-
-  .contact-head span {
-    margin-top: 50px;
-    margin-bottom: -10px;
-  }
-
-  .contact-head {
-    font-size: 5dvw;
-  }
-
-}
-
 @media (max-width: 450px) {
 
   .services-card {
@@ -4998,10 +4981,6 @@ form h3 span {
     overflow: hidden;
     justify-content: center;
     align-items: center;
-  }
-
-  .scroll-top {
-    display: none;
   }
 
   .services-card img {
@@ -5019,7 +4998,7 @@ form h3 span {
 }
 
 .contact-form {
-  height: 700px;
+  height: auto;
 }
 
 @media (max-width: 1107px) {
@@ -5282,7 +5261,6 @@ form h3 span {
   }
 }
 
-
 @media screen and (max-width: 768px) {
   .main-team-container {
     width: 100%;
@@ -5292,6 +5270,10 @@ form h3 span {
     text-align: center;
   }
  
+  .scroll-top {
+    display: none;
+  }
+
   .about-text h1,
   .team-title h1,
   .team-header h1 {
@@ -5409,17 +5391,6 @@ form h3 span {
     width: 100%;
   }
 
-  .blog-card {
-    position: relative;
-    display: flex;
-    flex-grow: 1;
-    max-width: 1550px;
-    margin-top: 2em;
-    border-radius: 25px;
-    background: #b07246;
-    box-shadow: 0px 10px 50px rgba(243, 132, 28, 0.245);
-  }
-
   .inner-part {
     position: relative;
     display: flex;
@@ -5432,7 +5403,6 @@ form h3 span {
 
   .content {
     padding: 100px 20px 0 15px;
-
   }
 
   .content .title {
@@ -5449,11 +5419,7 @@ form h3 span {
   .view-code a {
     font-size: 2.3dvw;
   }
-
 }
-
-@media (max-width: 1616px) {}
-
 
 @media screen and (max-width: 1168px) {
   ul {
@@ -5559,6 +5525,14 @@ form h3 span {
         margin-top: 100px;
       }
 
+      form h3 {
+        font-size: 6dvw;
+      }
+      
+      form h3 span {
+        font-size: 2.8dvw;
+      }
+
       .d-section-bottom {
         position: relative;
         text-align: center;
@@ -5614,7 +5588,13 @@ form h3 span {
     .fs {
       top: 40%;
     }
-
+    .blog-card {
+      min-height: 380px;
+    }
+    .inner-part {
+      padding: none;
+      margin-top: -50px;
+    }
   }
 
   @media (max-width: 767px) {
