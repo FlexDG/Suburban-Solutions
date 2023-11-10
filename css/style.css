@@ -4886,7 +4886,7 @@ form h3 span {
   .cursor {
     opacity: 0;
   }
-   
+
 }
 
 
@@ -5269,7 +5269,7 @@ form h3 span {
     margin: auto;
     text-align: center;
   }
- 
+
   .scroll-top {
     display: none;
   }
@@ -5525,10 +5525,19 @@ form h3 span {
         margin-top: 100px;
       }
 
+      input::-webkit-input-placeholder {
+        font-size: 2.5dvw;
+      }
+
+      textarea::-webkit-input-placeholder {
+        font-size: 2.5dvw;
+      }
+
+
       form h3 {
         font-size: 6dvw;
       }
-      
+
       form h3 span {
         font-size: 2.8dvw;
       }
@@ -5588,9 +5597,11 @@ form h3 span {
     .fs {
       top: 40%;
     }
+
     .blog-card {
       min-height: 380px;
     }
+
     .inner-part {
       padding: none;
       margin-top: -50px;
