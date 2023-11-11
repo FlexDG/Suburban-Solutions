@@ -5598,6 +5598,11 @@ form h3 span {
       top: 40%;
     }
 
+    .contact-row button {
+      padding: 10px 28px;
+      font-size: 11px;
+    }  
+
     .blog-card {
       min-height: 380px;
     }
